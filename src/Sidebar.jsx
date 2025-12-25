@@ -44,7 +44,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     {isOpen && <p className="text-xs font-semibold text-orange-100/70 mb-3 px-2 uppercase tracking-wider">Main</p>}
                     <div className="space-y-1">
                         <SidebarItem icon={LayoutDashboard} text="Dashboard" active isOpen={isOpen} />
-                        <SidebarItem icon={Calendar} text="Calendar" isOpen={isOpen} />
+                        <SidebarItem icon={Calendar} text="Calendar" to="/calendar" isOpen={isOpen} />
                     </div>
                 </div>
 

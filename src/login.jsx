@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // Added Link import
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -11,9 +11,9 @@ const Login = () => {
         e.preventDefault();
         setError('');
 
+        // Updated logic: Removed alert, navigates directly
         if (username === "admin" && password === "Admin1234#") {
-            alert("Admin Login Successful!");
-            navigate("/dashboard");
+            navigate("/dashboard"); // Go directly to dashboard
             return;
         }
 
@@ -91,7 +91,7 @@ const Login = () => {
                         </button>
                     </form>
 
-                    {/* NEW CREATE ADMIN LINK */}
+                    {/* CREATE ADMIN LINK */}
                     <div className="mt-6 text-center">
                         <Link
                             to="/create-admin"
